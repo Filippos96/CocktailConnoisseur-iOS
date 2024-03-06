@@ -14,6 +14,9 @@
 		815BB09C2B98A7650065A0FF /* CocktailConnoisseurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BB09B2B98A7650065A0FF /* CocktailConnoisseurTests.swift */; };
 		815BB0A62B98A7650065A0FF /* CocktailConnoisseurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BB0A52B98A7650065A0FF /* CocktailConnoisseurUITests.swift */; };
 		815BB0A82B98A7650065A0FF /* CocktailConnoisseurUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BB0A72B98A7650065A0FF /* CocktailConnoisseurUITestsLaunchTests.swift */; };
+		815BB0B52B98A7DD0065A0FF /* CocktailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BB0B42B98A7DD0065A0FF /* CocktailModel.swift */; };
+		815BB0B72B98A81C0065A0FF /* CocktailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BB0B62B98A81C0065A0FF /* CocktailView.swift */; };
+		815BB0B92B98A8670065A0FF /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BB0B82B98A8670065A0FF /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		815BB0A12B98A7650065A0FF /* CocktailConnoisseurUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocktailConnoisseurUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		815BB0A52B98A7650065A0FF /* CocktailConnoisseurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailConnoisseurUITests.swift; sourceTree = "<group>"; };
 		815BB0A72B98A7650065A0FF /* CocktailConnoisseurUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailConnoisseurUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		815BB0B42B98A7DD0065A0FF /* CocktailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailModel.swift; sourceTree = "<group>"; };
+		815BB0B62B98A81C0065A0FF /* CocktailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailView.swift; sourceTree = "<group>"; };
+		815BB0B82B98A8670065A0FF /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 				815BB08C2B98A7630065A0FF /* ContentView.swift */,
 				815BB08E2B98A7650065A0FF /* Assets.xcassets */,
 				815BB0902B98A7650065A0FF /* Preview Content */,
+				815BB0B42B98A7DD0065A0FF /* CocktailModel.swift */,
+				815BB0B62B98A81C0065A0FF /* CocktailView.swift */,
+				815BB0B82B98A8670065A0FF /* HomeScreen.swift */,
 			);
 			path = CocktailConnoisseur;
 			sourceTree = "<group>";
@@ -258,6 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				815BB08D2B98A7630065A0FF /* ContentView.swift in Sources */,
+				815BB0B92B98A8670065A0FF /* HomeScreen.swift in Sources */,
+				815BB0B52B98A7DD0065A0FF /* CocktailModel.swift in Sources */,
+				815BB0B72B98A81C0065A0FF /* CocktailView.swift in Sources */,
 				815BB08B2B98A7630065A0FF /* CocktailConnoisseurApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,7 @@
 //  CocktailConnoisseurApp.swift
 //  CocktailConnoisseur
 //
-//  Created by Jasmin on 2024-03-06.
+//  Created by Filip on 2024-03-06.
 //
 
 import SwiftUI
