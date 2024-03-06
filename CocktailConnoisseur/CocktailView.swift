@@ -24,7 +24,8 @@ struct CocktailView: View {
 
         ZStack{
             Color(.black)
-                .ignoresSafeArea()
+                
+                .ignoresSafeArea(.all)
             VStack{
                 Text(cocktailObj.cocktailName)
                     .font(.largeTitle)
@@ -41,7 +42,7 @@ struct CocktailView: View {
                                 .font(.title2)
                                 .fontWeight(.bold)
                             Spacer()
-                            Text("\(String(format: "&g", cocktailObj.ammount[index].rounded())) \(cocktailObj.measurements[index])")
+                            Text("\(formatDouble(cocktailObj.ammount[index])) \(cocktailObj.measurements[index])")
                                 .font(.title2)
                                 .fontWeight(.bold)
                         }
@@ -57,5 +58,10 @@ struct CocktailView: View {
             .navigationBarTitleDisplayMode(.inline)
 
         }
+    }
+    func formatDouble(_ temp: Double) -> String {
+        let tempVar = String(format: "%g", temp)
+        print(tempVar)
+        return tempVar
     }
 }

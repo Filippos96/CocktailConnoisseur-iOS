@@ -20,15 +20,16 @@ struct HomeScreen: View {
             ammount: [2,0.75,0.75],
             imageURL: "https://cdn1.foodviva.com/static-content/food-images/classic-cocktails/gimlet-cocktail/gimlet-cocktail.jpg",
             imageScale: 1)]
-
+    
     var body: some View {
+        NavigationStack {
         ZStack {
             Color.black
                 .ignoresSafeArea()
-
-
-                NavigationStack {
-                    ScrollView{
+            
+            
+                
+                ScrollView{
                     ForEach(cocktailList) { cocktail in
                         NavigationLink(destination: CocktailView(cocktailObj: cocktail)) {
                             VStack {
@@ -36,14 +37,16 @@ struct HomeScreen: View {
                                     .font(.title)
                                     .fontWeight(.semibold)
                                     .foregroundStyle(Color.white)
-
+                                
                                 AsyncImage(url: URL(string: cocktail.imageURL), scale: cocktail.imageScale)
+                                    
                             }
                             .background(Color.black) // Set the background color here
-                        }.scrollContentBackground(.hidden)
-                    }.scrollContentBackground(.hidden)
+                        }//.scrollContentBackground(.hidden)
+                    }//.scrollContentBackground(.hidden)
                 }
             }
+             
         }
     }
 }
