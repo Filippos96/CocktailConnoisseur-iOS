@@ -17,6 +17,7 @@
 		815BB0B52B98A7DD0065A0FF /* CocktailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BB0B42B98A7DD0065A0FF /* CocktailModel.swift */; };
 		815BB0B72B98A81C0065A0FF /* CocktailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BB0B62B98A81C0065A0FF /* CocktailView.swift */; };
 		815BB0B92B98A8670065A0FF /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BB0B82B98A8670065A0FF /* HomeScreen.swift */; };
+		815BB0BB2B98ABF90065A0FF /* CocktailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BB0BA2B98ABF90065A0FF /* CocktailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		815BB0B42B98A7DD0065A0FF /* CocktailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailModel.swift; sourceTree = "<group>"; };
 		815BB0B62B98A81C0065A0FF /* CocktailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailView.swift; sourceTree = "<group>"; };
 		815BB0B82B98A8670065A0FF /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		815BB0BA2B98ABF90065A0FF /* CocktailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				815BB0B42B98A7DD0065A0FF /* CocktailModel.swift */,
 				815BB0B62B98A81C0065A0FF /* CocktailView.swift */,
 				815BB0B82B98A8670065A0FF /* HomeScreen.swift */,
+				815BB0BA2B98ABF90065A0FF /* CocktailViewModel.swift */,
 			);
 			path = CocktailConnoisseur;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				815BB08D2B98A7630065A0FF /* ContentView.swift in Sources */,
 				815BB0B92B98A8670065A0FF /* HomeScreen.swift in Sources */,
+				815BB0BB2B98ABF90065A0FF /* CocktailViewModel.swift in Sources */,
 				815BB0B52B98A7DD0065A0FF /* CocktailModel.swift in Sources */,
 				815BB0B72B98A81C0065A0FF /* CocktailView.swift in Sources */,
 				815BB08B2B98A7630065A0FF /* CocktailConnoisseurApp.swift in Sources */,

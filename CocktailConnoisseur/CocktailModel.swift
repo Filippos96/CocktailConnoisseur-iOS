@@ -7,12 +7,15 @@
 
 import Foundation
 
-struct CocktailObj: Identifiable{
+struct Cocktail: Identifiable{
     var id = UUID()
     var cocktailName: String
-    var ingredients: [String]
-    var measurements: [String]
-    var ammount: [Double]
+    var recipe: [Ingredient]
     var imageURL: String
     var imageScale: CGFloat
+}
+struct Ingredient{
+    var ingredinet: String
+    var ammount: Double
+    var measurment: String
 }

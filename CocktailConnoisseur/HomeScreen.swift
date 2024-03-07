@@ -6,18 +6,18 @@ import SwiftUI
 
 struct HomeScreen: View {
     @State var cocktailList = [
-        CocktailObj(
+        Cocktail(
             cocktailName: "Negroni",
-            ingredients: ["Gin", "Sweet Vermouth", "Campari"],
-            measurements: ["cl","cl","cl"],
-            ammount: [2.0,2,2],
+            recipe: [Ingredient(ingredinet: "Gin", ammount: 2, measurment: "cl"),
+                     Ingredient(ingredinet: "Campari", ammount: 2, measurment: "cl"),
+                     Ingredient(ingredinet: "Sweet Vermouth", ammount: 2, measurment: "cl")],
             imageURL: "https://drinkoteket.se/wp-content/uploads/mezcal-negroni.jpg",
             imageScale: 3),
-        CocktailObj(
-            cocktailName: "Gin gimlet",
-            ingredients: ["Gin", "Lemon Juice", "Simple Syrup"],
-            measurements: ["cl","cl","cl"],
-            ammount: [2,0.75,0.75],
+        Cocktail(
+            cocktailName: "Gin Gimlet",
+            recipe: [Ingredient(ingredinet: "Gin", ammount: 2, measurment: "cl"),
+                     Ingredient(ingredinet: "Lemon Juice", ammount: 0.75, measurment: "cl"),
+                     Ingredient(ingredinet: "Simple Syrup", ammount: 0.75, measurment: "cl")],
             imageURL: "https://cdn1.foodviva.com/static-content/food-images/classic-cocktails/gimlet-cocktail/gimlet-cocktail.jpg",
             imageScale: 1)]
     
@@ -31,7 +31,7 @@ struct HomeScreen: View {
                 
                 ScrollView{
                     ForEach(cocktailList) { cocktail in
-                        NavigationLink(destination: CocktailView(cocktailObj: cocktail)) {
+                        NavigationLink(destination: CocktailView(cocktail: cocktail)) {
                             VStack {
                                 Text(cocktail.cocktailName)
                                     .font(.title)

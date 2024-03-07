@@ -12,7 +12,7 @@ struct CocktailView: View {
 
     @Environment(\.dismiss) var dismiss
 
-    var cocktailObj: CocktailObj
+    var cocktail: Cocktail
 
     var cocktailName = "Negroni"
     var ingredients = ["Gin", "Sweet Vermouth", "Campari"]
@@ -27,22 +27,22 @@ struct CocktailView: View {
                 
                 .ignoresSafeArea(.all)
             VStack{
-                Text(cocktailObj.cocktailName)
+                Text(cocktail.cocktailName)
                     .font(.largeTitle)
                     .bold()
                     .foregroundStyle(Color.red)
 
 
-                AsyncImage(url: URL(string: cocktailObj.imageURL), scale: cocktailObj.imageScale)
+                AsyncImage(url: URL(string: cocktail.imageURL), scale: cocktail.imageScale)
                 List{
-                    ForEach(0..<ingredients.count, id: \.self) { index in
+                    ForEach(0..<cocktail.recipe.count, id: \.self) { index in
 
                         HStack{
-                            Text("\(cocktailObj.ingredients[index]) ")
+                            Text("\(cocktail.recipe[index].ingredinet) ")
                                 .font(.title2)
                                 .fontWeight(.bold)
                             Spacer()
-                            Text("\(formatDouble(cocktailObj.ammount[index])) \(cocktailObj.measurements[index])")
+                            Text("\(formatDouble(cocktail.recipe[index].ammount)) \(cocktail.recipe[index].measurment)")
                                 .font(.title2)
                                 .fontWeight(.bold)
                         }
@@ -54,7 +54,7 @@ struct CocktailView: View {
                 .frame(alignment: .bottom)
                 .scrollContentBackground(.hidden)
             }
-            .navigationTitle(cocktailObj.cocktailName)
+            .navigationTitle(cocktail.cocktailName)
             .navigationBarTitleDisplayMode(.inline)
 
         }
@@ -63,5 +63,22 @@ struct CocktailView: View {
         let tempVar = String(format: "%g", temp)
         print(tempVar)
         return tempVar
+    }
+}
+
+struct CocktailView_Preveiws: PreviewProvider {
+    static var previews: some View {
+            @Environment(\.dismiss) var dismiss
+            @State var cocktail = Cocktail(
+                cocktailName: "Negroni",
+                recipe: [Ingredient(ingredinet: "Gin", ammount: 2, measurment: "cl"),
+                         Ingredient(ingredinet: "Campari", ammount: 2, measurment: "cl"),
+                         Ingredient(ingredinet: "Sweet Vermouth", ammount: 2, measurment: "cl")],
+                imageURL: "https://drinkoteket.se/wp-content/uploads/mezcal-negroni.jpg",
+                imageScale: 3)
+        NavigationView{
+            CocktailView(cocktail: cocktail)
+        }
+        
     }
 }
