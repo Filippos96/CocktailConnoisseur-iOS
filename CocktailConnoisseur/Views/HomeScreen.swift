@@ -26,9 +26,6 @@ struct HomeScreen: View {
         ZStack {
             Color.black
                 .ignoresSafeArea()
-            
-            
-                
                 ScrollView{
                     ForEach(cocktailList) { cocktail in
                         NavigationLink(destination: CocktailView(cocktail: cocktail)) {
@@ -41,9 +38,8 @@ struct HomeScreen: View {
                                 AsyncImage(url: URL(string: cocktail.imageURL), scale: cocktail.imageScale)
                                     
                             }
-                            .background(Color.black) // Set the background color here
-                        }//.scrollContentBackground(.hidden)
-                    }//.scrollContentBackground(.hidden)
+                        }
+                    }
                 }
             }
              
