@@ -7,18 +7,15 @@
 
 import Foundation
 import SwiftUI
+import SwiftData
 
 struct CocktailView: View {
 
     @Environment(\.dismiss) var dismiss
-
+    @Environment(\.modelContext) var context
+    
     var cocktail: Cocktail
-
-    var cocktailName = "Negroni"
-    var ingredients = ["Gin", "Sweet Vermouth", "Campari"]
-    var measurements = ["cl","cl","cl"]
-    var ammount = [2,2,2]
-    var image = "https://drinkoteket.se/wp-content/uploads/mezcal-negroni.jpg"
+    
 
     var body: some View {
 
@@ -34,7 +31,7 @@ struct CocktailView: View {
 
                 AsyncImage(url: URL(string: cocktail.imageURL), scale: cocktail.imageScale)
                 Spacer()
-                InteractionBar()
+                InteractionBar(cocktail: cocktail, favCocktail: FavCocktail(id: cocktail.id, cocktailName: cocktail.cocktailName))
                 List{
                     ForEach(0..<cocktail.recipe.count, id: \.self) { index in
                         IngredientView(recipe: cocktail.recipe[index])
@@ -78,7 +75,7 @@ struct CocktailView_Preveiws: PreviewProvider {
     static var previews: some View {
             @Environment(\.dismiss) var dismiss
             @State var cocktail = Cocktail(
-                cocktailName: "Negroni",
+                id: 1, cocktailName: "Negroni",
                 recipe: [Ingredient(ingredinet: "Gin", ammount: 2, measurment: "cl"),
                          Ingredient(ingredinet: "Campari", ammount: 2, measurment: "cl"),
                          Ingredient(ingredinet: "Sweet Vermouth", ammount: 2, measurment: "cl")],

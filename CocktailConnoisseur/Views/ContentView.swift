@@ -13,15 +13,15 @@ struct ContentView: View {
         ZStack{
             TabView {
                 Group{
-                    HomeScreen()
+                    HomeView()
                         .tabItem {
                             Image(systemName: "house")
                         }
-                    HomeScreen()
+                    HomeView()
                         .tabItem {
                             Image(systemName: "house.fill")
                         }
-                    HomeScreen()
+                    FavoriteCocktailsView()
                         .tabItem {
                             Image(systemName: "house.fill")
                         }

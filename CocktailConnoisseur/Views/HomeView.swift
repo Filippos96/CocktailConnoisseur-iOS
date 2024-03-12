@@ -4,7 +4,7 @@
 import Foundation
 import SwiftUI
 
-struct HomeScreen: View {
+struct HomeView: View {
     @State var cocktailList = [
         Cocktail(
             id: 1, cocktailName: "Negroni",
@@ -42,12 +42,11 @@ struct HomeScreen: View {
                     }
                 }
             }
-             
         }
     }
 }
 
 
 #Preview {
-    HomeScreen()
+    HomeView()
 }
