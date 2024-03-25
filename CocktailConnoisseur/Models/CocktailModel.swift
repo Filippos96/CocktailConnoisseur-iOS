@@ -31,3 +31,4 @@ class FavCocktail{
         self.cocktailName = cocktailName
     }
 }
+

@@ -14,4 +14,19 @@ import SwiftData
 @MainActor
 class DataCoordinator: NSObject{
     
+    static let identifier: String = "[DataCoordinator]"
+    static let shared: DataCoordinator = DataCoordinator()
+    
+    let persistantContainer: ModelContainer = {
+        do {
+            let container = try ModelContainer(
+                for: FavCocktail.self,
+                configurations: ModelConfiguration()
+            )
+            return container
+        } catch {
+            fatalError("Failed to create container")
+        }
+    }()
+    var favCocktails: [FavCocktail] = []
 }

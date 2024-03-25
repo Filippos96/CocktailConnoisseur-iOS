@@ -31,7 +31,7 @@ struct CocktailView: View {
 
                 AsyncImage(url: URL(string: cocktail.imageURL), scale: cocktail.imageScale)
                 Spacer()
-                InteractionBar(cocktail: cocktail, favCocktail: FavCocktail(id: cocktail.id, cocktailName: cocktail.cocktailName))
+                InteractionBar(favCocktail: FavCocktail(id: cocktail.id, cocktailName: cocktail.cocktailName))
                 List{
                     ForEach(0..<cocktail.recipe.count, id: \.self) { index in
                         IngredientView(recipe: cocktail.recipe[index])
@@ -71,19 +71,19 @@ func formatDouble(_ temp: Double) -> String {
     return tempVar
 }
 
-struct CocktailView_Preveiws: PreviewProvider {
-    static var previews: some View {
-            @Environment(\.dismiss) var dismiss
-            @State var cocktail = Cocktail(
-                id: 1, cocktailName: "Negroni",
-                recipe: [Ingredient(ingredinet: "Gin", ammount: 2, measurment: "cl"),
-                         Ingredient(ingredinet: "Campari", ammount: 2, measurment: "cl"),
-                         Ingredient(ingredinet: "Sweet Vermouth", ammount: 2, measurment: "cl")],
-                imageURL: "https://drinkoteket.se/wp-content/uploads/mezcal-negroni.jpg",
-                imageScale: 3)
-        NavigationView{
-            CocktailView(cocktail: cocktail)
-        }
-        
-    }
-}
+//struct CocktailView_Preveiws: PreviewProvider {
+//    static var previews: some View {
+//            @Environment(\.dismiss) var dismiss
+//            @State var cocktail = Cocktail(
+//                id: 1, cocktailName: "Negroni",
+//                recipe: [Ingredient(ingredinet: "Gin", ammount: 2, measurment: "cl"),
+//                         Ingredient(ingredinet: "Campari", ammount: 2, measurment: "cl"),
+//                         Ingredient(ingredinet: "Sweet Vermouth", ammount: 2, measurment: "cl")],
+//                imageURL: "https://drinkoteket.se/wp-content/uploads/mezcal-negroni.jpg",
+//                imageScale: 3)
+//        NavigationView{
+//            CocktailView(cocktail: cocktail)
+//        }
+//        
+//    }
+//}

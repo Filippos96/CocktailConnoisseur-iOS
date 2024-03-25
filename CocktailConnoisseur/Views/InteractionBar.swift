@@ -11,9 +11,9 @@ import SwiftData
 struct InteractionBar: View {
     @Environment(\.modelContext) var context
     @Query(sort: \FavCocktail.cocktailName) var favCocktails: [FavCocktail]
-    var cocktail: Cocktail
     var favCocktail: FavCocktail
     @State var isFavorite: Bool = false
+    let dataCoordinator = DataCoordinator.shared // Maybe move this somewhere else
     
     var body: some View {
         HStack{
@@ -27,10 +27,19 @@ struct InteractionBar: View {
                 .frame(width: 25, height: 25)
                 .onTapGesture {
                     isFavorite.toggle()
-                    if favCocktails.contains(favCocktail){
-                        context.delete(favCocktail)
+                    if dataCoordinator.doesObjectExist(id: favCocktail.id){
+                        
+                        dataCoordinator.deleteObject(id: favCocktail.id)
+                        print("deleting \(favCocktail.cocktailName)")
+                        print(favCocktail.id)
+                        
                     } else {
                         context.insert(favCocktail)
+                        print("inserting \(favCocktail.cocktailName)")
+                        print(favCocktail.id)
+                        var favCocktails2 = favCocktails
+                        favCocktails2.append(favCocktail)
+                        
                     }
                 }
             Spacer()
@@ -41,7 +50,7 @@ struct InteractionBar: View {
                     context.delete(favCocktail)
                 }
             
-            ///\/\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ 
+            ///\/\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\
             //
             Spacer()
             Image(systemName: "square.and.pencil")

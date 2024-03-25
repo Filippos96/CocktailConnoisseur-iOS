@@ -22,6 +22,7 @@
 		815BB0BF2B9B0D290065A0FF /* EditCocktiailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BB0BE2B9B0D290065A0FF /* EditCocktiailView.swift */; };
 		815BB0C42B9B88510065A0FF /* FavoriteCocktailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BB0C32B9B88510065A0FF /* FavoriteCocktailsView.swift */; };
 		815BB0C72BA06F3E0065A0FF /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BB0C62BA06F3E0065A0FF /* DataCoordinator.swift */; };
+		815BB0C92BA0868D0065A0FF /* DataCoordinator+SwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815BB0C82BA0868D0065A0FF /* DataCoordinator+SwiftData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		815BB0BE2B9B0D290065A0FF /* EditCocktiailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCocktiailView.swift; sourceTree = "<group>"; };
 		815BB0C32B9B88510065A0FF /* FavoriteCocktailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCocktailsView.swift; sourceTree = "<group>"; };
 		815BB0C62BA06F3E0065A0FF /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
+		815BB0C82BA0868D0065A0FF /* DataCoordinator+SwiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataCoordinator+SwiftData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				815BB0C62BA06F3E0065A0FF /* DataCoordinator.swift */,
+				815BB0C82BA0868D0065A0FF /* DataCoordinator+SwiftData.swift */,
 			);
 			path = DataCoordinator;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815BB0C92BA0868D0065A0FF /* DataCoordinator+SwiftData.swift in Sources */,
 				815BB0C72BA06F3E0065A0FF /* DataCoordinator.swift in Sources */,
 				815BB0BD2B9B08FD0065A0FF /* InteractionBar.swift in Sources */,
 				815BB08D2B98A7630065A0FF /* ContentView.swift in Sources */,
